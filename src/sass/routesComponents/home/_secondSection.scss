@@ -59,6 +59,7 @@
         flex-direction: column;
         justify-content: space-around;
         width: 80%;
+        padding: 1rem;
     }
 
     &__pill {
@@ -215,10 +216,6 @@
     display: flex;
     width: 100%;
     padding: 1.5rem;
-
-    &__pill {
-
-    }
 
     &__icon {
         display: flex;

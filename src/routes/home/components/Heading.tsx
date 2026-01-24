@@ -30,13 +30,15 @@ const Heading = () => {
 
   return(
     <div className="heading-container" ref={targetRef}>
+      <h2 className="heading-sub u-center-text">
+        Préstamos <span className={`${header.color}`} style={{backgroundColor: header.bg, padding: '0 1rem 0.5rem 1rem', borderRadius: '5px'}}>{header.label}</span>
+      </h2>
+      <h2 className="heading-sub u-center-text">para contratistas</h2>
       <h1
         className="brand"
       >
         k<span className="blue">r</span>edi
       </h1>
-      <h2 className="heading-sub u-center-text">Préstamos <span className={`${header.color}`} style={{backgroundColor: header.bg, padding: '0 1rem 0.5rem 1rem', borderRadius: '5px'}}>{header.label}</span></h2>
-      <h2 className="heading-sub u-center-text">para contratistas</h2>
     </div>
   )
 }
