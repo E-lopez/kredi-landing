@@ -1,0 +1,140 @@
+.survey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+    width: 100%;
+    background-color: $bright-yellow;
+    min-height: 100vh;
+    overflow-y: auto;
+    & > * {
+        width: 85%;
+        max-width: $max-width;
+    }
+
+    &__stepper {
+        background-color: rgba(#fff, .5);
+        border-radius: 25px;
+        width: 20%;
+        margin-top: 2.5rem;
+        box-shadow: 5px 5px 10px rgba(0,0,0, 0.25);
+    }
+    
+    &--blue {
+        background-color: rgba($pale-blue, .6);
+    }
+    &--green {
+        background-color: $pale-green;
+    }
+    &--pink {
+        background-color: $pale-pink;
+    }
+    &--yellow {
+        background-color: $bright-yellow;
+    }
+    &--light-gray {
+        background-color: $color-gray-light;
+    }
+    &--orange {
+        background-color: $bright-orange;
+    }
+
+
+    &__image-box {
+        width: 80%;
+        height: 30vh;
+        margin-bottom: 5rem;
+        border-radius: 25px;
+        background-color: rgba($pale-blue, .5);
+        box-shadow: 5px 5px 10px rgba(0,0,0, 0.25);
+
+        &>img {
+            width: 25rem;
+            position: relative;
+            left: 25%;
+        }
+    }
+
+    &__loader {
+        background-color: $color-gray-light;
+    }
+}
+
+.consent-box {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 2rem 1rem 2rem;
+    width: 100%;
+    height: 100%;
+}
+  
+// Media Queries
+
+@media screen and (width >= 768px) {
+    .survey {
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 9rem;
+        min-height: 150vh;
+
+        &__stepper {
+            width: 20%;
+            margin-top: 2rem;
+        }
+
+        &__image-box {
+            position: relative;
+            margin-top: 10rem;
+
+            &>img {
+                width: 35rem;
+            }
+        }
+        
+        &__consent-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10rem 2rem 1rem 2rem;
+            width: 100%;
+            height: auto;
+        }
+
+        &__consent-content {
+            max-width: $max-width-sm;
+        }
+    }
+}
+
+@media screen and (width >= 1024px) {
+    .survey {
+        &__image-box {
+            position: relative;
+            margin-top: 10rem;
+            max-width: 30%;
+
+            &>img {
+                width: 25rem;
+            }
+        }
+    }
+}
+
+@media screen and (width >= 1440px) {
+    .survey {
+        padding-top: 10%;
+        & > * {
+            width: 35%;
+        }
+
+        &__image-box {
+            position: relative;
+            margin-top: 20rem;
+
+            &>img {
+                width: 35rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+.main-bar{
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: $max-width;
+  height: 6.5rem;
+  background-color: rgba(255,255,255,.85);
+
+  &--hide {
+    animation: moveOutTop 1s ease-out;
+  }
+  
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 100%;
+    max-width: 1440px;  
+    & div {
+      min-width: 26%;
+    }
+    & div:first-child {
+      justify-content: flex-start;
+    } 
+    & div:last-child {
+      justify-content: flex-end;
+    } 
+  }
+
+  &__home-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &>img{
+      width: 5rem;
+      height: auto;
+    }
+  }
+
+  &__center-buttons {
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $color-gray-light;
+    width: 100%;
+    height: 3.8rem;
+    border-radius: 5px;
+  } 
+
+  &__responsive-buttons {
+    display: inherit;
+    align-items: center;
+    gap: .5rem;
+    width: 50%;
+    height: 80%;
+  }
+
+  &__hamburguer-button {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    width: 5rem;
+    height: 5rem;
+    border: #000 solid 2px;
+    background-color: rgba(255,255,255,.5);
+    & > i {
+      font-size: 3rem;
+      width: 100%;
+      margin-top: 5%;
+    }
+  }
+
+  &__cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    width: 70%;
+    height: 100%;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 2rem;
+    font-family: $button-label;
+
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (425px < width <= 768px){}
+
+@media screen and (768px < width <= 1024px) {
+  .main-bar {
+    background-color: unset;
+    &__container {
+      width: 80%;
+      align-items: flex-end;
+      & div:nth-child(3) {
+        justify-content: flex-end;
+      } 
+    }
+    &__cta-button {
+      width: 70%;
+      height: 100%;
+      padding: .25rem 0;
+    }
+  }
+}
+
+@media screen and (1024px < width) {
+  .main-bar {
+     &__container {
+      & div:nth-child(1) {
+        justify-content: center;
+      } 
+    }
+    &__cta-button {
+      margin: auto;
+      width: 15rem;
+      height: 4rem;
+    }
+  }
+}
+
+@media screen and (width > 1440px) {
+  .main-bar{
+    max-width: unset;
+    height: 10rem;
+  }
+}

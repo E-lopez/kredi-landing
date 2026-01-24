@@ -1,0 +1,27 @@
+@import '../routesComponents/repaymentPlan/table';
+@import '../routesComponents/repaymentPlan/planSummary';
+
+.repayment {
+  min-height: 100vh;
+  height: auto;
+  width: 90%;
+  margin: auto;
+  padding: 7rem 0;
+
+  &__recalculate {
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: $pale-pink;
+    border-radius: 25px;
+  }
+}
+
+@media screen and (width > 768px) {
+  .repayment {
+    padding-top: 9rem;
+    &__recalculate {
+      width: 50%;
+    }
+  }
+}

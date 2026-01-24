@@ -1,0 +1,42 @@
+.documents-upload {
+  background-color: $pale-green;
+
+  &__wrap {
+    text-align: center;
+    width: 80%;
+  }
+
+  &__list-box {
+    padding: .5rem;
+    margin: 3rem 0;
+  }
+
+  &__doc-list {
+    line-height: .5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .documents-upload {
+    &__wrap {
+      justify-self: center;
+      width: 80%;
+    }
+
+    &__doc-list {
+      text-align: center;
+      font-size: 2rem;
+      margin: 2.5rem 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .documents-upload {
+    padding: 7.5%;
+    &__wrap {
+      justify-self: center;
+      width: 60%;
+    }
+  }
+}
